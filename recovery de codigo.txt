@@ -1,0 +1,8 @@
+ELIPSOGRAFO 3D EN HTML
+
+      <a-entity
+        gltf-model="#Elipsografo"
+        position="4 4 5"
+        scale="0.1 0.1 0.1"
+        animation="property: rotation; to: 0 0 0; loop: true; dur: 5000"
+      ></a-entity>

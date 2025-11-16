@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Frame VR</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="skyblue"></a-sky>
+      <a-plane
+        position="0 0 -4"
+        color="#3DB8AB"
+        width="4"
+        height="4"
+        rotation="-90 0 0"
+      ></a-plane>
+
+      <!-- Añadí un cubo al plano -->
+      <a-box 
+        position="-1 0.5 -3" 
+        color="red" 
+        rotation="0 45 0"
+        animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"
+      ></a-box>
+      
+      <!-- Añadí un cilindro al plano -->
+      <a-cylinder
+        position="1 0.75 -3"
+        color="magenta"
+        radius="1.0"
+        height="1.5"
+        animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"
+      ></a-cylinder>
+        
+      <!-- Añadí una esfera al plano -->
+      <a-sphere 
+        position="-1 0.5 -5" 
+        radius="0.5" 
+        color="orange"
+        animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"
+      ></a-sphere>
+    
+      <!-- Añadí una pirámide (cono) al plano -->
+      <a-cone 
+        position="1 0.5 -5" 
+        color="yellow" 
+        radius-bottom="0.5" 
+        radius-top="0" 
+        height="1"
+        animation="property: scale; dir: alternate; dur: 100; to: 1.1 1.1 1.1; loop: true"
+      ></a-cone>  
+    </a-scene>
+  </body>
+</html>
+
+animation="property: scale; to: 0 0 0; loop: true; dur: 7000 ; dir: alternate"

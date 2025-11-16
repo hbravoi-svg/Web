@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Frame con escenas</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img src="grass.jpg" id="grass" />
+        <img src="cielo.jpg" id="sky" />
+
+        <a-asset-item id="car" src="car/scene.gltf"></a-asset-item>
+
+        <a-asset-item
+          src="bulbasaur/bulbasaur-pokemon-go.obj"
+          id="bulbasaur-obj"
+        ></a-asset-item>
+
+        <a-asset-itemz
+          src="bulbasaur/bulbasaur-pokemon-go.mtl"
+          id="bulbasaur-mtl"
+        ></a-asset-item>
+
+        <a-asset-item id="house" src="house/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="Elipsografo" src="Elipsografo/Elip.gltf"></a-asset-item>
+
+        <a-asset-item id="Euclides" src="Euclides/euclides.glb"></a-asset-item>
+
+      </a-assets>
+
+      <!-- <a-entity gltf-model="#house" position="-9 0 -4" scale="0.25 0.25 0.25" ></a-entity> MUESTRA DE USO DE UN OBJETO -->
+      
+      <!-- Añadí un objeto modelado, un Elipsografo -->
+      <!-- 
+      <a-entity
+      gltf-model="#Elipsografo"
+      position="0 5 15"
+      scale="0.05 0.05 0.05"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"
+      animation__bounce="property: position; dir: alternate; dur: 2000; loop: true; to: 4 6 5"
+      event-set__mouseenter="_event: mouseenter; scale: 0.15 0.15 0.15"
+      event-set__mouseleave="_event: mouseleave; scale: 0.1 0.1 0.1"
+      event-set__click="_event: click; material.color: red"
+      ></a-entity>
+      <a-text value="Elipsografo" position="-1.7 8.645 10.000" color="#e7e700" scale="3 3 3" side="double" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000" animation__bounce="property: position; dir: alternate; dur: 2000; loop: true; to: 4 10 5"></a-text>
+      -->
+
+      <!-- Añadí un modelo de Euclides -->
+      <a-entity gltf-model="#Euclides"
+        position="-0.3 -4 3"
+        rotation="0 240 0"
+        scale="5 5 5">
+      </a-entity>
+      
+      <a-text value="<EUCLIDES>" position="-3.4 0.5 5.6" color="#1BDEF2" scale="5 5 5" side="double"></a-text>
+
+      <!-- Añadí un cubo al plano -->
+      <a-box 
+        position="-8 2.3 -3" 
+        scale="5 5 5"
+        color="red" 
+        rotation="0 45 0"
+        animation="property: scale; dir: alternate; dur: 600; to: 1.1 1.1 1.1; loop: true"
+      ></a-box>
+      <a-text value="Cubo" position="-8.936 5.721 -2.922" color="#12053e" scale="3 3 3" side="double"></a-text>
+
+      <!-- Añadí un cilindro al plano -->
+      <a-cylinder
+        position="-8 2.3  7"
+        scale="3 3 3"
+        color="magenta"
+        radius="1.0"
+        height="1.5"
+        animation="property: scale; dir: alternate; dur: 600; to: 1.1 1.1 1.1; loop: true"
+      ></a-cylinder>
+      <a-text value="Cilindro" position="-9.013 5.111 7.131" color="#12053e" scale="3 3 3" side="double"></a-text>
+          
+      <!-- Añadí una esfera al plano -->
+      <a-sphere 
+        position="10 2.3  -3" 
+        scale="5 5 5"
+        radius="0.5" 
+        color="orange"
+        animation="property: scale; dir: alternate; dur: 600; to: 1.1 1.1 1.1; loop: true"
+      ></a-sphere>
+      <a-text value="Esfera" position="9.242 5.299 -2.730" color="#12053e" scale="3 3 3" side="double"></a-text>
+
+      <!-- Añadí una pirámide (cono) al plano -->
+      <a-cone 
+        position="10 2.3  7"
+        scale="5 5 5" 
+        color="yellow" 
+        radius-bottom="0.5" 
+        radius-top="0" 
+        height="1"
+        animation="property: scale; dir: alternate; dur: 600; to: 1.1 1.1 1.1; loop: true"
+      ></a-cone>  
+      <a-text value="Cono" position="8.800 5.193 7.000" color="#12053e" scale="3 3 3" side="double"></a-text>
+      
+      <!-- Añadí título del curso -->
+      <a-text value="</> HISTORIA DE LA MATEMATICA" position="-5 0.342 12.700" color="#e7e700" scale="3 3 3" side="double"></a-text>
+
+      <a-sky src="#sky"></a-sky>
+
+      <a-plane
+        width="30"
+        height="30"
+        rotation="-90 0 0"
+        src="#grass"
+        repeat="10 10"
+      ></a-plane>
+      
+    </a-scene>
+  </body>
+</html>
